@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "start": "node src/server/index.js",
-    "build": "webpack"
+    "build-prod": "webpack --config webpack.prod.js",
+    "build-dev": "webpack serve --mode development --config webpack.dev.js --open"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
     "babel-loader": "^8.2.2",
-    "html-webpack-plugin": "^5.3.2"
+    "html-webpack-plugin": "^5.3.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }

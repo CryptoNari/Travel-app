@@ -16,7 +16,7 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-app.listen(port, function() {
+app.listen(process.env.PORT || port, function() {
     console.log('::: server running :::');
     console.log(`::: running on localhost: ${port} :::`);
 })

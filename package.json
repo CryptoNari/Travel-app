@@ -2,7 +2,7 @@
   "name": "travel-app",
   "version": "1.0.0",
   "description": "Udacity Fend Capstone Project",
-  "main": "main.js",
+  "main": "index.js",
   "scripts": {
     "test": "jest",
     "start": "node src/server/index.js"

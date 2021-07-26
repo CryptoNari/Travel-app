@@ -11,9 +11,10 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
+app.use(express.static('dist'));
+
 app.get('/', function (req, res) {
-    // res.sendFile('dist/index.html')
-    res.sendFile(path.resolve('src/client/views/index.html'))
+    res.sendFile('dist/index.html')
 })
 
 app.listen(process.env.PORT || port, function() {

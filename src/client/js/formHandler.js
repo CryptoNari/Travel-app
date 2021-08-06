@@ -1,3 +1,5 @@
+import { showTrip } from "./showTrip";
+
 const startHandlers = () => {
     const addTripForm = document.getElementById('addTrip');
     addTripForm.addEventListener('submit', (event) => {
@@ -37,6 +39,7 @@ const handleSubmit = () => {
     .then(res => res.json())
     .then(res => {
     console.log(res)                                 //Client.uiUpdate(res)
+    showTrip(res);
     })
     
 }

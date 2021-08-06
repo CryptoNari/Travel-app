@@ -9,31 +9,28 @@
 
         <header>
             <div class="title">
-                Capstone - Travel-App
-            </div>
-            <div class="form">
-                <form id="addTrip" class="input-form">
-                    <div class="input-text">
-                        <label for="tripLocation">Add your destination:</label>
-                        <input type="text" id="tripLocation" placeholder="Where do you want to go?">
-                    </div>
-                    <div class="input-date">
-                        <label for="startDate">Start Date:</label>
-                        <input type="date" id="startDate">
-                    </div>
-                    <div class="input-date">
-                        <label for="endDate">End Date:</label>
-                        <input type="date" id="endDate">
-                    </div>
-                    <button type="submit">Add trip</button>
-                </form>
-                <div id="formError">
-
-                </div>
+                Capstone - Plan your travel
             </div>
         </header>
 
         <main>
+            <section class="input">
+                <div id="query-img"></div>
+                <div class="form">
+                    <form id="addTrip" class="input-form">
+                        <label for="tripLocation">Destination: </label><br>
+                        <input type="text" id="tripLocation" placeholder="City/Country"><br>
+                        <label for="startDate">Start Date: </label><br>
+                        <input type="date" id="startDate"><br>
+                        <label for="endDate">End Date: </label><br>
+                        <input type="date" id="endDate"><br>
+                        <button type="submit">Submit</button>                        
+                        <div id="formError">
+    
+                        </div>
+                    </form>
+                </div>
+            </section>
             <section>
                 <strong>Form Results:</strong>
                 <div id="results">

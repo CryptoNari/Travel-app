@@ -1,5 +1,6 @@
 import { handleSubmit } from './js/formHandler';
 import { startHandlers } from './js/formHandler';
+import { showTrip } from './js/showTrip';
 
 import './styles/base.scss';
 import './styles/footer.scss';

@@ -1,5 +1,9 @@
 header {
-    padding: 25px;
-    font-size: 2em;
-    text-align: center;
+    display: block;    
+
+    .title {
+        padding: 10px;
+        font-size: 2em;
+        text-align: left;
+    }
 }

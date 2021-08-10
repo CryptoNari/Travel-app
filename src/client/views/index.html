@@ -15,7 +15,6 @@
 
         <main>
             <section class="input">
-                <div id="query-img"></div>
                 <div class="form">
                     <form id="addTrip" class="input-form">
                         <label for="tripLocation">Destination: </label><br>
@@ -24,11 +23,15 @@
                         <input type="date" id="startDate"><br>
                         <label for="endDate">End Date: </label><br>
                         <input type="date" id="endDate"><br>
-                        <button type="submit">Submit</button>                        
+                        <button type="submit">Show Trip Info</button>                        
                         <div id="formError">
     
                         </div>
-                    </form>
+                    </form>   
+                </div>
+                <div id="tripInfo">
+                    <div id="tripImage"></div>
+                    <div id="tripWeather"></div>
                 </div>
             </section>
             <section>

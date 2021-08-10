@@ -2,84 +2,89 @@
     background-image: url("/img/travel_plan.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 40vh;
+    height: 50vh;
     display: flex;
-    flex-direction: column;
-    
     font-size: 1.5em;
+    font-family: 'Special Elite', cursive;
+    #tripInfo {
+        display: block;
+        border: solid 1px white;
+        margin: 10px;
+        height: 90%;
+        width: 100%;
+        border-radius: 0.6rem;
+        
+        background-size: cover;
+        background-repeat: no-repeat;
+       
 
+        #tripImage {
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            height: 80%;
+            width: 100%;
+            border-radius: 0.6rem 0.6rem 0 0;
+            background-size: cover;
+            background-repeat: no-repeat;
+            max-width: 800px;
+            text-align: right;
+            
+            h4 {
+                text-align: center;
+                opacity: 70%;
+                width: 65%;
+                position: relative;
+                top: 10px;
+                left: 10px;
+                margin: 0px;
+                padding: 8px 5px 5px 5px;
+                color: whitesmoke;
+                text-shadow: black;
+                background-color: black;
+                border-radius: 0.4rem;
+            }
+        }
+    }
     .form {
-       padding: 25px;
-        
-        
+        border: solid 1px white;
+        margin: 10px;
         #addTrip { 
-            margin-right: 50%;
-               
+            padding: 10px;
+            border: dotted 1px white;
+
             label {
                 color: white;
             }                
             input {
                 font-size: 0.8em;
-                background-color: transparent;
-                color:#bdb3af;
+                background-color: white;
+                border-radius: 0.4rem;
+                text-align: center;
+                width: 300px;
+                color:#000000;
                 margin-top: 5px;
                 margin-bottom: 5px;
                 height: auto;
-                border-style: solid;
-                border-color:#bdb3af;
+                border-style: none;
                 &::placeholder {
-                    color: #bdb3af;
+                    color: #3b3735;
                 }
+                &:focus {
+                    box-shadow: 0.2rem 0.8rem 1.6rem;
+                    border: none;
+                }
+
             }        
-            // button Hover effect Created by scanfcode https://blog.avada.io/css/button-hover-effects/#button-hover-effects-css-only-scanfcode
-            button{
+            button {
                 background-color:transparent;
-                border:0px;
-                padding: 12px 20px;
+                padding: 20px 20px;
                 color:#ffffff;
-                position:relative;
                 font-family: Arial, sans-serif;
                 font-size:22px;
                 margin:10px 0px;
-                position:relative;
-                text-transform:uppercase;
+                border-radius: 0.4rem;
                 
-                &:before,&:after {
-                    position:absolute;
-                    border-color: rgb(255, 255, 255);
-                    -webkit-transition: all 0.25s;
-                    transition: all 0.25s;
-                    border-style: solid;
-                    border-width: 0;
-                    content:"";
-                    height: 40px;
-                    position: absolute;
-                    width: 40px;
-                }
-
-                &:before {
-                    border-left-width:2px;
-                    left:-6px;
-                    top:6px;
-                }
-
-                &:after {
-                    border-right-width:2px;
-                    right:-6px;
-                    top:6px;
-                }
-
-                &:hover:before,&:hover:after {
-                    border-top-width:2px;
-                    border-left-width:0px;
-                    border-bottom-width:2px;
-                    border-right-width:0;
-                    border-color:#0f0f0f;
-                    top:-3px;
-                    bottom:-3px;
-                    width:100%;
-                    height:100%;                
-                }
             }    
         }        
     }

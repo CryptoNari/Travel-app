@@ -1,7 +1,12 @@
 const showTrip = (data) => {
     const error = document.getElementById('formError');
-    const results = document.getElementById('results');
+    const results = document.getElementById('tripWeather');
+    const tripInfo = document.getElementById('tripInfo');
+    const tripImage = document.getElementById('tripImage');
     if (data.valid === true) {
+        //tripInfo.style.backgroundImage = `url(${data.cityImageUrl || data.countryImageUrl})`;
+        tripImage.style.backgroundImage = `url(${data.cityImageUrl || data.countryImageUrl})`;
+        tripImage.innerHTML = `<h4>${data.city}, ${data.country}</h4>`
         error.innerHTML = '';
         results.innerHTML = `
             <div class="results-header">
@@ -9,9 +14,6 @@ const showTrip = (data) => {
                 <img src="/img/icons/${data.currentWeather.weather.icon}.png" alt="weather-icon.jpg">
                 <span>${data.currentWeather.weather.description}</span>
                 <span>${data.currentWeather.temp}</span>
-            </div>
-            <div class= "results-info">
-                <img src="${data.cityImageUrl || data.countryImageUrl}" alt="weather-icon.jpg">    
             </div>
         `;
     } else {

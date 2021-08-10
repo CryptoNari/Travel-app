@@ -20,7 +20,7 @@ const handleSubmit = () => {
     // Check Dates
     console.log(startDate.getTime());
     console.log(endDate.getTime());
-    console.log(Math.ceil((endDate.getTime() -currentDate.getTime() ) / (24*60*60*1000)));
+    console.log(Math.ceil((startDate.getTime() -currentDate.getTime() ) / (24*60*60*1000)));
 
     // let destination = document.getElementById('tripLocation').value
     const userInput = {

@@ -39,6 +39,13 @@ app.post('/api-req', async (req, res) => {
     const pixaKey = process.env.pixabay_APIKEY;
     // User API Request 
     const destination = req.body.city;
+    // Date handling
+    const currentDate = new Date();
+    const startDate = req.body.start;
+    const endDate = req.body.end;
+    const dateStart = new Date(startDate);
+    const dateEnd = new Date(endDate);
+    const daysToTrip = (Math.ceil((dateStart.getTime() -currentDate.getTime() ) / (24*60*60*1000)));
 
     // First API request geonames
     let apiUrl = `http://api.geonames.org/searchJSON?username=${geoUser}&q=${destination}&maxRows=1`;
@@ -51,6 +58,8 @@ app.post('/api-req', async (req, res) => {
                 valid: true,
                 city: res.geonames[0].toponymName,
                 country: res.geonames[0].countryName,
+                start: startDate,
+                end: endDate,
                 lat: res.geonames[0].lat,
                 lng: res.geonames[0].lng
             };
@@ -66,23 +75,45 @@ app.post('/api-req', async (req, res) => {
 
     
     if (apiData.valid === true) {       // check for valid destination
-        // Second API request weatherbit
-        apiUrl = `https://api.weatherbit.io/v2.0/forecast/daily?key=${weatherKey}&lat=${apiData.lat}&lon=${apiData.lng}&lang=en`
+        // Second API request weatherbit current
+        apiUrl = `https://api.weatherbit.io/v2.0/current?key=${weatherKey}&lat=${apiData.lat}&lon=${apiData.lng}&lang=en`
         console.log('::Request Weatherbit::');
         await fetch(apiUrl)
         .then(res => res.json())
         .then(res => {
             apiData = {
                 ...apiData,
-                currentWeather: res.data[0]
+                currentWeather: res.data
             };
             console.log('::: API Data: weatherbit :::');
             console.log(apiData);
         })
         .catch(error => console.log('error',error));
 
+        // Further API request weatherbit forecast
+        if (daysToTrip < 17) {
+            apiUrl = `https://api.weatherbit.io/v2.0/forecast/daily?key=${weatherKey}&lat=${apiData.lat}&lon=${apiData.lng}&lang=en`
+            console.log('::Request Weatherbit::');
+            await fetch(apiUrl)
+            .then(res => res.json())
+            .then(res => {
+                apiData = {
+                    ...apiData,
+                    forecastWeather: res.data
+                };
+                console.log('::: API Data: weatherbit :::');
+                console.log(apiData);
+            })
+            .catch(error => console.log('error',error));
+        } else {
+            apiData = {
+                ...apiData,
+                forecastWeather: 'noData'
+            };
+        }
+
         // Third API request pixabay
-        apiUrl = `https://pixabay.com/api/?key=${pixaKey}&q=${apiData.city}&category=places&per_page=4`
+        apiUrl = `https://pixabay.com/api/?key=${pixaKey}&q=${apiData.city}&category=places&per_page=4&orientation=horizontal`
         console.log('::Request Pixabay::');
         await fetch(apiUrl)
         .then(res => res.json())

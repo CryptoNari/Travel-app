@@ -24,7 +24,9 @@ const handleSubmit = () => {
 
     // let destination = document.getElementById('tripLocation').value
     const userInput = {
-       city: destination
+       city: destination,
+       start: document.getElementById('startDate').value,
+       end: document.getElementById('endDate').value
     }
 
     console.log("::: Form Submitted :::");

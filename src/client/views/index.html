@@ -9,33 +9,53 @@
 
         <header>
             <div class="title">
-                Capstone - Plan your travel
+                Capstone - Travel Planner
             </div>
         </header>
 
         <main>
-            <section class="input">
-                <div class="form">
-                    <form id="addTrip" class="input-form">
-                        <label for="tripLocation">Destination: </label><br>
-                        <input type="text" id="tripLocation" placeholder="City/Country"><br>
-                        <label for="startDate">Start Date: </label><br>
-                        <input type="date" id="startDate"><br>
-                        <label for="endDate">End Date: </label><br>
-                        <input type="date" id="endDate"><br>
-                        <button type="submit">Show Trip Info</button>                        
-                        <div id="formError">
-    
+            <section class="user-form">
+                <form id="addTrip">
+                    <div class="input-location">
+                        <label for="tripLocation">Destination: </label>
+                        <input type="text" id="tripLocation" placeholder="City/Country">
+                    </div>
+                    <div class="input-dates">
+                        <div class="travel-start">
+                            <label for="startDate">Start Date: </label>
+                            <input type="date" id="startDate">
                         </div>
-                    </form>   
-                </div>
-                <div id="tripInfo">
+                        <div class="travel-end">
+                            <label for="endDate">End Date: </label>
+                            <input type="date" id="endDate">                            
+                        </div>
+                    </div>
+                    <div class="form-button">
+                        <button type="submit">Submit</button>
+                    </div>
+                    <div id="formError"></div>
+                </form>   
+            </section>
+            <section id="tripInfo">
+                <div class="current-trip">
                     <div id="tripImage"></div>
-                    <div id="tripWeather"></div>
+                    <div id="destWeather"></div>
+                </div>
+                <div class="trip-data">
+                    <h4>Weather Forecast</h4>
+                    <div id="destForecast"></div>
+                    <div class="trip-info">
+                        <h4>Trip starts in</h4>
+                        <p><span id="tripCount"></span> day/s</p>
+                    </div>
+                    <div class="trip-info">
+                        <h4>Trip length is</h4>
+                        <p><span id="tripLength"></span> day/s</p>
+                    </div>
                 </div>
             </section>
-            <section>
-                <strong>Form Results:</strong>
+            <section class="saved-trips">
+                <strong></strong>
                 <div id="results">
                     
                 </div>    

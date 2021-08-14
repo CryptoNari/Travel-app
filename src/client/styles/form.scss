@@ -1,91 +1,85 @@
-.input {
-    background-image: url("/img/travel_plan.jpg");
-    background-size:cover;
-    background-repeat: no-repeat;
-    height: 50vh;
-    display: flex;
-    font-size: 1.5em;
+.user-form {
+    display: block;
+    font-size: 1.2em;
     font-family: 'Special Elite', cursive;
-    #tripInfo {
-        display: block;
-        border: solid 1px white;
-        margin: 10px;
-        height: 90%;
-        width: 100%;
-        border-radius: 0.6rem;
-        
-        background-size: cover;
-        background-repeat: no-repeat;
-       
+    // border: solid 1px white;
+    padding: 15px;
 
-        #tripImage {
-            margin: 0px;
-            padding: 0px;
-            display: block;
-            height: 80%;
-            width: 100%;
-            border-radius: 0.6rem 0.6rem 0 0;
-            background-size: cover;
-            background-repeat: no-repeat;
-            max-width: 800px;
-            text-align: right;
-            
-            h4 {
-                text-align: center;
-                opacity: 70%;
-                width: 65%;
-                position: relative;
-                top: 10px;
-                left: 10px;
-                margin: 0px;
-                padding: 8px 5px 5px 5px;
-                color: whitesmoke;
-                text-shadow: black;
-                background-color: black;
-                border-radius: 0.4rem;
+    #addTrip { 
+        padding: 10px;
+         // border: dotted 1px white;
+        display: flex;
+        justify-content: center;
+
+        .input-location {
+            margin-right: 20px;
+        }
+
+        .input-dates {
+            display: flex;
+            .travel-start, .travel-end {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 10px;
             }
         }
-    }
-    .form {
-        border: solid 1px white;
-        margin: 10px;
-        #addTrip { 
-            padding: 10px;
-            border: dotted 1px white;
 
-            label {
-                color: white;
-            }                
-            input {
-                font-size: 0.8em;
-                background-color: white;
-                border-radius: 0.4rem;
-                text-align: center;
-                width: 300px;
-                color:#000000;
-                margin-top: 5px;
-                margin-bottom: 5px;
-                height: auto;
-                border-style: none;
-                &::placeholder {
-                    color: #3b3735;
-                }
-                &:focus {
-                    box-shadow: 0.2rem 0.8rem 1.6rem;
-                    border: none;
-                }
-
-            }        
+        .form-button {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             button {
-                background-color:transparent;
-                padding: 20px 20px;
+                background-color:black;
+                opacity: 80%;
+                padding: 5px 20px;
                 color:#ffffff;
                 font-family: Arial, sans-serif;
-                font-size:22px;
-                margin:10px 0px;
+                font-size:20px;
+                margin:0px 25px;
                 border-radius: 0.4rem;
                 
-            }    
-        }        
+                &:hover {
+                    background-color: white;
+                    color: black;
+                }
+            }
+            
+        }
+
+        #formError {
+            color:red;
+        }
+
+    }        
+    
+}
+
+label {
+    color: white;
+}
+
+input {
+    font-size: 18px;
+    background-color: white;
+    border-radius: 0.4rem;
+    text-align: center;
+    width: auto;
+    
+    color:#000000;
+    margin: 5px;
+    
+    height: min-content;
+    border-style: none;
+
+    &:hover {
+        box-shadow: 0.2rem 0.8rem 1.6rem;            
+    }
+
+    &::placeholder {
+        color: #3b3735;
+    }
+    &:focus {
+        box-shadow: 0.2rem 0.8rem 1.6rem;
+        border: none;
     }
 }

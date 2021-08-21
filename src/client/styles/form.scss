@@ -5,6 +5,10 @@
     // border: solid 1px white;
     padding: 15px;
 
+    #formError {
+        color:red;
+    }
+
     #addTrip { 
         padding: 10px;
          // border: dotted 1px white;
@@ -42,14 +46,8 @@
                     background-color: white;
                     color: black;
                 }
-            }
-            
+            }     
         }
-
-        #formError {
-            color:red;
-        }
-
     }        
     
 }

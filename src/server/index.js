@@ -39,19 +39,15 @@ app.get('/test', async (req, res) => {
 app.post('/api-req', async (req, res) => {
     // API-Data Collection
     let apiData = {}; 
-    // API Keys 
+    // API Keys with dotenv
     const geoUser = process.env.geonames_user;
     const weatherKey = process.env.weatherbit_APIKEY;
     const pixaKey = process.env.pixabay_APIKEY;
-    // User API Request 
+    // User API Request Input
     const destination = req.body.city;
-    // Date handling
-    const currentDate = new Date();
-    const startDate = req.body.start;
-    const endDate = req.body.end;
-    const dateStart = new Date(startDate);
-    const dateEnd = new Date(endDate);
-    const daysToTrip = (Math.ceil((dateStart.getTime() -currentDate.getTime() ) / (24*60*60*1000)));
+    const startDate = req.body.dates.start;
+    const endDate = req.body.dates.end;
+    const daysToTrip = req.body.dates.daysToTrip;
 
     // First API request geonames
     let apiUrl = `http://api.geonames.org/searchJSON?username=${geoUser}&q=${destination}&maxRows=1`;

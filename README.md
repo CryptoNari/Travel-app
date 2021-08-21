@@ -2,6 +2,8 @@
 
 Final Project on the "Udacity - Front End Web Developer nanodegree" course.
 
+<hr>
+
 ## Overview:
 
 This project requires to build out a travel app that, at a minimum, obtains a desired trip location & date from the user, and displays weather and an image of the location using information obtained from external APIs.
@@ -13,19 +15,7 @@ This project requires to build out a travel app that, at a minimum, obtains a de
 3. Run `npm run start` in your terminal.
 4. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
 
-## Used APIs
-
-### Geonames ([link](http://www.geonames.org/))
-
-The GeoNames geographical database covers all countries and contains over eleven million placenames that are available for download free of charge.
-
-### Weatherbit ([link](https://www.weatherbit.io/))
-
-The High Performance Weather API for all of your Weather data needs.
-
-### Pixabay ([link](https://pixabay.com/api/docs/))
-
-API for searching and retrieving free images and videos released under the Pixabay License.
+<hr>
 
 ## Project Specifications
 
@@ -51,3 +41,30 @@ At least one of these is required, but the rest are great additional ways to fur
 - [ ] Allow the user to add additional trips (this may take some heavy reworking, but is worth the challenge).
     - [ ] Automatically sort additional trips by countdown.
     - [ ] Move expired trips to bottom/have their style change so it’s clear it’s expired.
+
+<hr>
+
+## Used Tools
+
+- Node.js
+- Express.js
+- Webpack
+- Babel
+- Sass
+- Jest
+- Service Workers
+
+## Used APIs
+
+### Geonames ([link](http://www.geonames.org/))
+
+The GeoNames geographical database covers all countries and contains over eleven million placenames that are available for download free of charge.
+
+### Weatherbit ([link](https://www.weatherbit.io/))
+
+The High Performance Weather API for all of your Weather data needs.
+
+### Pixabay ([link](https://pixabay.com/api/docs/))
+
+API for searching and retrieving free images and videos released under the Pixabay License.
+

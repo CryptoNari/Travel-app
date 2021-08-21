@@ -1,4 +1,4 @@
-const port = 3000;
+// **const port = 3000;
 // Setting up dotenv for api keys
 const dotenv = require('dotenv');
 dotenv.config();
@@ -24,9 +24,15 @@ app.get('/', function (req, res) {
     res.sendFile('dist/index.html')
 })
 
-app.listen(process.env.PORT || port, function() {
-    console.log('::: server running :::');
-    console.log(`::: running on localhost: ${port} :::`);
+//app.listen(process.env.PORT || port, function() {
+//    console.log('::: server running :::');
+//    console.log(`::: running on localhost: ${port} :::`);
+//})
+
+// Jest Server Test
+
+app.get('/test', async (req, res) => {
+    res.json({message: 'pass!'})
 })
 
 //  Handle API Request with User Input
@@ -151,6 +157,10 @@ app.post('/api-req', async (req, res) => {
     console.log(apiData);
     res.send(apiData);
 })
+
+module.exports = app
+
+
 
 /* app.get('/geonames', async function (req, res) {
     console.log('Start_API_Request');

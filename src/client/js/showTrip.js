@@ -31,7 +31,7 @@ const showTrip = (data) => {
         
         destWeather.innerHTML = `
             <div class="weather-report">
-                <img src="/img/icons/${data.currentWeather[0].weather.icon}.png" alt="weather-icon.jpg">
+                <img src="/img/icons/${data.currentWeather[0].weather.icon}.png" alt="weather-icon.png">
                 <div class="current-trip-weather">
                     <p>${data.currentWeather[0].weather.description}</p>
                     <p>${data.currentWeather[0].temp} °C</p>
@@ -44,7 +44,7 @@ const showTrip = (data) => {
         if (dateInfo.daysToTrip < 16){
             destForecast.innerHTML = `
                 <div class="weather-report">
-                    <img src="/img/icons/${data.forecastWeather[dateInfo.daysToTrip].weather.icon}.png" alt="weather-icon.jpg">
+                    <img src="/img/icons/${data.forecastWeather[dateInfo.daysToTrip].weather.icon}.png" alt="weather-icon.png">
                     <div>
                         <p>${data.forecastWeather[dateInfo.daysToTrip].weather.description}</p>
                         <p>${data.forecastWeather[dateInfo.daysToTrip].temp} °C</p>

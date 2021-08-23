@@ -32,8 +32,10 @@ const showTrip = (data) => {
         destWeather.innerHTML = `
             <div class="weather-report">
                 <img src="/img/icons/${data.currentWeather[0].weather.icon}.png" alt="weather-icon.jpg">
-                <p><br>${data.currentWeather[0].weather.description}</p>
-                <p><br>${data.currentWeather[0].temp} °C</p>
+                <div class="current-trip-weather">
+                    <p>${data.currentWeather[0].weather.description}</p>
+                    <p>${data.currentWeather[0].temp} °C</p>
+                </div>    
             </div>
             `;
         tripLength.innerHTML = dateInfo.lengthOfTrip;
@@ -43,8 +45,10 @@ const showTrip = (data) => {
             destForecast.innerHTML = `
                 <div class="weather-report">
                     <img src="/img/icons/${data.forecastWeather[dateInfo.daysToTrip].weather.icon}.png" alt="weather-icon.jpg">
-                    <p><br>${data.forecastWeather[dateInfo.daysToTrip].weather.description}</p>
-                    <p><br>${data.forecastWeather[dateInfo.daysToTrip].temp} °C</p>
+                    <div>
+                        <p>${data.forecastWeather[dateInfo.daysToTrip].weather.description}</p>
+                        <p>${data.forecastWeather[dateInfo.daysToTrip].temp} °C</p>
+                    </div>       
                 </div>
                 `;
         } else {

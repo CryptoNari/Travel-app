@@ -10,8 +10,8 @@ const startHandlers = () => {
     })
 }
 
-const handleSubmit = () => {
-    
+// On form submit start api request and show results
+const handleSubmit = () => {  
     // get user inputs
     const destination = document.getElementById('tripLocation').value;
     const startDate = document.getElementById('startDate').value;

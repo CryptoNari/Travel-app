@@ -1,5 +1,10 @@
 body {
-    font-size: 18px;
+    // https://css-tricks.com/fun-viewport-units/
+    // font grows 1px for every 100px of viewport width
+    font-size: calc(16px + 1vw);
+    // leading grows along with font,
+    // with an additional 0.1em + 0.5px per 100px of the viewport
+    line-height: calc(1.1em + 0.5vw); ;
     margin: 0px;
     background-color:#c5beac;
 }
@@ -8,5 +13,12 @@ main {
     background-image: url("/img/travel_plan.jpg");
     background-size:cover;
     background-repeat: no-repeat;
-    height: 90vh;
+    height: 80vh;
 }
+
+  @media (max-width: 900px) {
+    main {
+        height: auto;
+        min-height: 80vh;
+    }
+  }

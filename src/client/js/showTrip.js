@@ -60,7 +60,6 @@ const showTrip = (data) => {
         error.innerHTML = '<span class="errorMsg">Couldn\'t find results for destination! Check your input!</span>';
         results.innerHTML = '';
     }
-
 }
 
 export {showTrip}

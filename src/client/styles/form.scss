@@ -43,6 +43,7 @@
             flex-direction: column;
             justify-content: center;
             margin: 0.5em;
+            
             button {
                 background-color:black;
                 opacity: 80%;
@@ -59,7 +60,6 @@
             }     
         }
     }        
-    
 }
 
 label {
@@ -74,11 +74,9 @@ input {
     background-color: white;
     border-radius: 0.4rem;
     text-align: center;
-    width: auto;
-    
+    width: auto; 
     color:#000000;
     margin: 5px;
-    
     height: min-content;
     border-style: none;
 

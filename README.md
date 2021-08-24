@@ -68,3 +68,7 @@ The High Performance Weather API for all of your Weather data needs.
 
 API for searching and retrieving free images and videos released under the Pixabay License.
 
+## Known issues/Things to fix
+
+-   Dev-Server background picture doesn't load after file-loader implementation
+-   Empty User Destination input gets a result

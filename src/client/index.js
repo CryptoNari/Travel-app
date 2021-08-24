@@ -1,4 +1,5 @@
 import { startHandlers } from './js/formHandler';
+import './js/iconImport';
 
 import './styles/base.scss';
 import './styles/footer.scss';

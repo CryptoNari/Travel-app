@@ -17,7 +17,7 @@ const cors = require('cors');
 app.use(cors());
 
 // Helper for API-requests
-const FormData = require('form-data');
+//const FormData = require('form-data');
 const fetch = require("node-fetch");
 const { response } = require('express');
 

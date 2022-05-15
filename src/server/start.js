@@ -1,10 +1,10 @@
 // Setting up Server
 const app = require('./index')
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
-const server = app.listen(port, listening);
+const server = app.listen(PORT, listening);
 
 function listening() {
     console.log('::: server running :::');
-    console.log(`::: running on localhost: ${port} :::`)
+    console.log(`::: running on port: ${PORT} :::`)
 }

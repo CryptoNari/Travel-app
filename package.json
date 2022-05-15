@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CryptoNari/Travel-app.git"
+    "url": "git+https://github.com/NaNaFoNo/Travel-app.git"
   },
   "author": "Andreas Vieten",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/CryptoNari/Travel-app/issues"
+    "url": "https://github.com/NaNaFoNo/Travel-app/issues"
   },
-  "homepage": "https://github.com/CryptoNari/Travel-app#readme",
+  "homepage": "https://github.com/NaNaFoNo/Travel-app#readme",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",

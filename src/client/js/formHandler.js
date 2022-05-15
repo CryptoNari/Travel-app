@@ -1,6 +1,14 @@
 import { showTrip } from "./showTrip";
 import { dateCompare } from "./dateHandler";
 
+let serverAddress = '';
+if (process.env.NODE_ENV === "development") {
+    serverAddress = 'http://localhost:3000/api-req';
+} else if (process.env.NODE_ENV === "production") {
+    serverAddress = 'https://travel-app-fend21.herokuapp.com/api-req';
+}
+
+
 // Event Handler for Form Submit Button
 const startHandlers = () => {
     const addTripForm = document.getElementById('addTrip');
@@ -27,7 +35,7 @@ const handleSubmit = () => {
         }
         // Start Api Request on Server side
         //fetch('http://localhost:3000/api-req', {
-        fetch('https://travel-app-fend21.herokuapp.com/api-req', {
+        fetch(serverAddress, {
             method: 'POST',
             credentials: 'same-origin',
             headers: {

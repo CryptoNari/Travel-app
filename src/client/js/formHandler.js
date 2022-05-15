@@ -26,7 +26,8 @@ const handleSubmit = () => {
             dates: checkDateInputs
         }
         // Start Api Request on Server side
-        fetch('http://localhost:3000/api-req', {
+        //fetch('http://localhost:3000/api-req', {
+        fetch('https://travel-app-fend21.herokuapp.com/api-req', {
             method: 'POST',
             credentials: 'same-origin',
             headers: {

@@ -2,11 +2,12 @@ header {
     display: block;    
 
     .title {
-        color: azure;
-        font-family: 'Cinzel', serif;
         padding: 25px;
+        color: #00ff38;
+        font-family: 'Cinzel', serif;
         font-size: 1.8em;
-        line-height: 1.2em;
+        line-height: 1em;
         text-align: start;
+        text-shadow: .5px .5px black;
     }
 }

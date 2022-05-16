@@ -63,4 +63,4 @@ import icon62 from '../img/icons/t05n.png';
 import icon63 from '../img/icons/u00d.png';
 import icon64 from '../img/icons/u00n.png';
 
-import image from '../img/travel_plan.jpg';
+document.body.style.backgroundImage = "url('./img/icons/travel_plan.jpg')";

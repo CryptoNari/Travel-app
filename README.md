@@ -1,19 +1,29 @@
-# Capstone - Travel Planner App
+# Travel Planner App
+![Heroku](https://pyheroku-badge.herokuapp.com/?app=travel-app-fend21&style=plastic)
 
-Final Project on the "Udacity - Front End Web Developer nanodegree" course.
+This was the Final Project of the "Udacity - Front End Web Developer nanodegree" course. You can have a look at this project [here](https://travel-app-fend21.herokuapp.com/).
 
 <hr>
 
 ## Overview:
 
-This project requires to build out a travel app that, at a minimum, obtains a desired trip location & date from the user, and displays weather and an image of the location using information obtained from external APIs.
+This project required to build out a travel app that, at a minimum, obtains a desired trip location & date from the user, and displays weather and an image of the location using information obtained from external APIs.
 
-### How to start
+### How to start on your local machine
+
+Note: To make successfull API calls you need to have valid API keys for ([Geonames](http://www.geonames.org/)), ([Weatherbit](https://www.weatherbit.io/)) and ([Pixabay](https://pixabay.com/api/docs/)).
 
 1. Clone this Repository
-2. Node.js and npm needs to be installed 
-3. Run `npm run start` in your terminal.
-4. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
+2. Node.js and npm needs to be installed
+3. Create a '.env' file in the app directory and paste in your keys:
+    ```
+        geonames_user = YOUR_KEY_HERE
+        weatherbit_APIKEY = YOUR_KEY_HERE
+        pixabay_APIKEY = YOUR_KEY_HERE
+
+    ```
+4. Run `npm run start` in your terminal.
+5. Open your browser and go to [http://localhost:3000/](http://localhost:3000/)
 
 <hr>
 
@@ -21,54 +31,27 @@ This project requires to build out a travel app that, at a minimum, obtains a de
 
 The Udacity project specifications to pass the course can be looked up in the [project rubric](https://review.udacity.com/#!/rubrics/2669/view).
 
-### Extend Options
-
-At least one of these is required, but the rest are great additional ways to further customize and improve your project!
-
-- [x] Add end date and display length of trip.
-- [x] Pull in an image for the country from Pixabay API when the entered location brings up no results (good for obscure localities).
-- [ ] Allow user to add multiple destinations on the same trip.
-    - [ ] Pull in weather for additional locations.
-- [ ] Allow the user to add hotel and/or flight data.
-    - [ ] Multiple places to stay? Multiple flights?
-- [ ] Integrate the REST Countries API to pull in data for the country being visited.
-- [ ] Allow the user to remove the trip.
-- [ ] Use Local Storage to save the data so that when they close, then revisit the page, their information is still there.
-- [ ] Instead of just pulling a single day forecast, pull the forecast for multiple days.
-- [x] Incorporate icons into forecast.
-- [ ] Allow user to Print their trip and/or export to PDF.
-- [ ] Allow the user to add a todo list and/or packing list for their trip.
-- [ ] Allow the user to add additional trips (this may take some heavy reworking, but is worth the challenge).
-    - [ ] Automatically sort additional trips by countdown.
-    - [ ] Move expired trips to bottom/have their style change so it’s clear it’s expired.
-
-<hr>
 
 ## Used Tools
 
-- Node.js
-- Express.js
+- [![nodejs](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://github.com/NaNaFoNo)
+- [![expressjs](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)](https://github.com/NaNaFoNo)
 - Webpack
 - Babel
-- Sass
+- [![sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)](https://github.com/NaNaFoNo)
 - Jest
 - Service Workers
 
 ## Used APIs
 
-### Geonames ([link](http://www.geonames.org/))
+### ([Geonames](http://www.geonames.org/))
 
 The GeoNames geographical database covers all countries and contains over eleven million placenames that are available for download free of charge.
 
-### Weatherbit ([link](https://www.weatherbit.io/))
+### ([Weatherbit](https://www.weatherbit.io/))
 
 The High Performance Weather API for all of your Weather data needs.
 
-### Pixabay ([link](https://pixabay.com/api/docs/))
+### ([Pixabay](https://pixabay.com/api/docs/))
 
 API for searching and retrieving free images and videos released under the Pixabay License.
-
-## Known issues/Things to fix
-
--   Dev-Server background picture doesn't load after file-loader implementation
--   Empty User Destination input gets a result

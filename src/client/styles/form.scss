@@ -6,10 +6,14 @@
     padding: 0 1em;
     font-family: 'Special Elite', cursive;
     font-size: 0.8em;
-    .input-location {
+
+    .input-location, .input-dates {
         position: relative;
         display: flex;
         margin: 1em;
+        .travel-start, .travel-end {
+            position: relative;
+        }
         input{
             //font-family: 'Special Elite';
             font-size: 0.8em;
@@ -18,6 +22,10 @@
             border-radius: 15px;
             width: 26em;
         }
+        input[type=date]{
+            width: 12em;
+        }
+
         label{
             color: azure;
             position: absolute;
@@ -25,33 +33,13 @@
             left: .2em;
         }
     }
+
     .input-dates{
         :first-child{
             margin-right: 1em;
         }
-        display: flex;
-        margin: 1em;
-        
-        .travel-start, .travel-end {
-            position: relative;
-            
-            input{
-                //font-family: 'Special Elite';
-                padding: 5px;
-                height: 1.5em;
-                border-radius: 15px;
-                width: 12em;
-                font-size: 0.8em;
-            }
-            label{
-                
-                color: azure;
-                position: absolute;
-                top: -1.5em;
-                left: .2em;
-            }
-        }
     }
+
     .form-button{
         display: flex;
         flex-direction: column;
@@ -70,111 +58,3 @@
 
 
 }
-
-
-/* .user-form {
-    display: block;
-    font-family: 'Special Elite', cursive;
-    font-size: 0.8em;
-    padding: 0 15px;
-
-    #formError {
-        color:red;
-        font-size: 1.4em;
-        padding: 0.2em;
-        display: flex;
-        justify-content: space-around;
-        background-color: black;
-        border-radius: 0.4rem;
-        opacity: 70%;
-        text-align: center;
-    }
-
-    #addTrip { 
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-        .input-location {
-            margin:0.5em;
-        }
-
-        .input-dates {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin: 0.5em;
-
-            .travel-start, .travel-end {
-                display: flex;
-                justify-content: space-between;
-            }
-        }
-
-        .form-button {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0.5em;
-            
-            button {
-                background-color:black;
-                opacity: 80%;
-                padding: 5px 20px;
-                color:#ffffff;
-                font-family: Arial, sans-serif;
-                font-size:0.8em;
-                border-radius: 0.4rem;
-                
-                &:hover {
-                    background-color: white;
-                    color: black;
-                }
-            }     
-        }
-    }        
-}
-
-label {
-    text-align: center;
-    position: relative;
-    top: 5px;
-    color: white;
-}
-
-input {
-    font-size: 0.8em;
-    background-color: white;
-    border-radius: 0.4rem;
-    text-align: center;
-    width: auto; 
-    color:#000000;
-    margin: 5px;
-    height: min-content;
-    border-style: none;
-
-    &:hover {
-        box-shadow: 0.2rem 0.8rem 1.6rem;            
-    }
-
-    &::placeholder {
-        color: #3b3735;
-    }
-    &:focus {
-        box-shadow: 0.2rem 0.8rem 1.6rem;
-        border: none;
-    }
-}
-
-@media (min-width: 600px) { 
-    label {
-    top: 3px;
-    } 
-}
-
-@media (min-width: 900px) { 
-    label {
-    top: 1px;
-    } 
-} */

@@ -2,9 +2,8 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 1.5em;
@@ -43,9 +42,12 @@
   margin: 1em;
 }
 
+.trip-form .input-dates :first-child {
+  margin-right: 1em;
+}
+
 .trip-form .input-dates .travel-start, .trip-form .input-dates .travel-end {
   position: relative;
-  margin-right: 1em;
 }
 
 .trip-form .input-dates .travel-start input, .trip-form .input-dates .travel-end input {
@@ -61,6 +63,30 @@
   position: absolute;
   top: -1.5em;
   left: .2em;
+}
+
+.trip-form .form-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.trip-form .form-button button {
+  background-color: #00ff38;
+  border: none;
+  color: black;
+  padding: .3em .7em;
+  text-decoration: none;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 /* .user-form {

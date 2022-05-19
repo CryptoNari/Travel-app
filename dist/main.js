@@ -1108,7 +1108,7 @@ if (false) {} else if (true) {
 
 // Event Handler for Form Submit Button
 const startHandlers = () => {
-    const addTripForm = document.getElementById('addTrip');
+    const addTripForm = document.querySelector('.trip-form');
     addTripForm.addEventListener('submit', (event) => {
         event.preventDefault();
         handleSubmit();

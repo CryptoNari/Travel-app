@@ -47,6 +47,7 @@
         button {
             background-color: #00ff38;
             border: none;
+            border-radius: 15px;
             color: black;
             padding:  .3em .7em;
             text-decoration: none;
@@ -55,6 +56,16 @@
             cursor: pointer;
         }    
     }
+}
 
-
+#formError{
+  display: flex;
+  justify-content: center;
+  font-family: 'Special Elite', cursive;
+  color: red;  
+  background-color: black;
+  opacity: .5; 
+  margin: 1em ;
+  padding: .4em 1em .3em;
+  border-radius: 15px;
 }

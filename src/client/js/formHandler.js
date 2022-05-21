@@ -24,11 +24,12 @@ const handleSubmit = () => {
     const destination = document.getElementById('tripLocation').value;
     const startDate = document.getElementById('startDate').value;
     const endDate = document.getElementById('endDate').value;
+    const formBtn = document.querySelector('button');
 
     const checkDateInputs = dateCompare(startDate,endDate);
-
     // verify date inputs
-    if (checkDateInputs.valid === true) {  
+    if (checkDateInputs.valid === true) {
+        formBtn.classList.toggle('loading'); 
         const userInput = {
             city: destination,
             dates: checkDateInputs
@@ -47,10 +48,12 @@ const handleSubmit = () => {
         .then(res => {
         // Show/Load Api Response to User 
         showTrip(res);
+        formBtn.classList.toggle('loading');
         })
     } else {
         const error = document.getElementById('formError');
         error.innerHTML = checkDateInputs.error;
+        formBtn.classList.toggle('loading');
     }
 }
 

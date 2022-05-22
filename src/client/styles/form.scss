@@ -40,18 +40,7 @@
         }
     }
 
-    .form-button{
-        display: flex;
-        justify-content: center;
-        margin: 1em;
-        button {
-            padding:  .3em .7em;
-            text-decoration: none;
-            font-size: 1em;
-            margin: 4px 2px;
-            cursor: pointer;
-        }    
-    }
+    
 }
 
 #formError{
@@ -66,25 +55,31 @@
   border-radius: 15px;
 }
 
-.submit-btn{
+
+.form-button{
     display: flex;
     justify-content: center;
-  }
+    margin: 1em;
+}
 
+ 
 button {
-    border-radius: 30px;
-    color:#00ff38;
-    font-weight: 600;
-    background-color: rgba(0, 0, 0, 0.6);
-    opacity: .8;
-    text-decoration: none;
     position: relative;
     display: flex;
     align-items: center;
+    border-radius: 30px;
+    padding:  .3em .7em;
+    font-size: 1em;
+    font-weight: 600;
+    color:#00ff38;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: .8;
     overflow: hidden;
+    cursor: pointer;
     .btn-text{
         padding-right: 2rem;
-      }
+    }
     .btn-icon{
         position: absolute;
         right: 0%;
@@ -95,29 +90,27 @@ button {
         justify-content: center;
         border-radius: 50%;
         padding: .4em;
-      }
+    }
     .btn-load {
         @extend .btn-icon;
-        position: absolute;
-        right: 0%;
         display: none;
-    }  
-}
- 
+    }
+}    
+
 .loading {
     .btn-text {
         color: azure;
     }
     .btn-load {
         @extend .btn-icon;
-        background-color: white;
-        color: #00ff38;
+        display: flex;
         position: absolute;
         right: 0%;
-        display: flex;
+        background-color: white;
+        color: #00ff38;
         z-index: 5;
         animation: spin 1s ease-in-out infinite;
-    }
+    } 
 }
 
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
